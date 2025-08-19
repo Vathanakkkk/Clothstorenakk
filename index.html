@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloth Store — Sample Landing Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --green-900:#0b3b2e;
+      --green-700:#117a65;
+      --green-500:#1db48b;
+      --cream:#f7f5f0;
+      --muted:#6b6b6b;
+      --max-width:1200px;
+      --radius:16px;
+      --glass: rgba(255,255,255,0.06);
+    }
+    *{box-sizing:border-box}  
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
+      background:linear-gradient(180deg,var(--cream),#fff 40%);
+      color:var(--green-900);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+    }
+    .wrap{max-width:var(--max-width);margin:0 auto;padding:28px}
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:52px;height:52px;border-radius:12px;display:grid;place-items:center;
+      background:linear-gradient(135deg,var(--green-700),var(--green-500));color:#fff;font-weight:800;font-size:20px
+    }
+    nav{display:flex;gap:18px;align-items:center;}
+    nav a{color: rgb(56, 113, 56);text-decoration:none;font-weight:600}
+    .actions{display:flex;gap:12px;align-items:center}
+    .btn{padding:10px 16px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+    .btn-ghost{background:transparent}
+    .btn-primary{background:var(--green-700);color:white}
+     .btn-ghost {
+  background: transparent;
+  color: var(--green-900);   /* dark green text */
+  border: 1px solid rgba(0,0,0,0.1);
+  transition: all 0.25s ease;
+  }
+  .btn-ghost:hover {
+  background: rgba(0,0,0,0.05);
+  color: #0b3b2e;
+  }
+
+    /* Hero*/
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:stretch;padding:40px 0}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.55));border-radius:20px;padding:32px;box-shadow:0 6px 24px rgba(12,40,30,0.06)}
+    .eyebrow{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--glass);font-size:13px}
+    h1{font-size:36px;margin:12px 0 8px}
+    p.lead{color:var(--muted);margin-bottom:18px}
+    .hero-cta{display:flex;gap:12px}
+    .features{display:flex;gap:12px;margin-top:20px}
+    .feature{display:flex;gap:10px;align-items:center}
+    .cup{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,#fff,rgba(255,255,255,0.9));display:grid;place-items:center;box-shadow:0 6px 18px rgba(16,40,30,0.06)}
+    /* Card menu*/
+    .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+    .menu-item{background:linear-gradient(180deg,#fff, #fbfbfb);padding:18px;border-radius:14px;display:flex;gap:12px;align-items:center;border:1px solid rgba(16,40,30,0.04)}
+    .menu-item img{width:82px;height:82px;object-fit:cover;border-radius:10px}
+    .price{font-weight:700}
+    /*Info strip*/
+    .strip{background:linear-gradient(90deg,var(--green-700),var(--green-500));color:#fff;padding:20px;border-radius:14px;margin:24px 0;display:flex;justify-content:space-between;align-items:center}
+    .strip p{margin:0}
+    /*Footer*/
+    footer{padding:28px 0;color:var(--muted);font-size:14px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    /*Responsive*/
+    @media (max-width:950px){
+      .hero{grid-template-columns:1fr;}
+      .menu-grid{grid-template-columns:repeat(2,1fr)}
+      .grid-3{grid-template-columns:1fr}
+    }
+    @media (max-width:520px){
+      .menu-grid{grid-template-columns:1fr}
+      .logo{width:44px;height:44px;font-size:18px}
+      h1{font-size:28px}
+    }
+    .menu-item:hover{transform:translateY(-6px);transition:all .25s ease;box-shadow:0 10px 30px rgba(16,40,30,0.08)}
+    .btn-primary:hover{filter:brightness(.95)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo"> C </div>
+        <div>
+          <div style="font-weight:800">Cloth Store</div>
+          <div style="font-size:12px;color:var(--muted)">Fashion · Apparel · Accessories</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#menu">Collection</a>
+        <a href="#rewards">Deals</a>
+        <a href="#locations">Stores</a>
+      </nav>
+      <div class="actions">
+         <button class="btn btn-ghost" onclick="window.location.href='Again.html'">Sign in</button>
+        <button class="btn btn-primary">Shop now</button>
+       </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-card">
+          <span class="eyebrow">New Arrival</span>
+          <h1>Summer Collection 2025</h1>
+          <p class="lead">Discover trendy styles and seasonal favorites. Fresh outfits crafted with quality fabrics and modern design.</p>
+          <div class="hero-cta">
+            <button class="btn btn-ghost" onclick="window.location.href='Again.html'">Shop now </button>
+             <button class="btn btn-ghost" onclick="window.location.href='Again.html'"> Find Store </button>
+          </div>
+          <div class="features">
+            <div class="feature">
+              <div class="cup">👗</div>
+              <div>
+                <div style="font-weight:700">High Quality</div>
+                <div style="font-size:13px;color:var(--muted)">Comfortable and durable materials</div>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="cup">🛍️</div>
+              <div>
+                <div style="font-weight:700">Fashionable</div>
+                <div style="font-size:13px;color:var(--muted)">Trendy designs for all occasions</div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-grid" id="menu">
+            <article class="menu-item">
+              <img src="https://ae01.alicdn.com/kf/Sb139f115c0ef4610b65fed2cfe19db6aX.jpg" alt="Summer Dress">
+              <div>
+                <div style="font-weight:700">Floral Summer Dress</div>
+                <div style="font-size:13px;color:var(--muted)">Lightweight fabric with floral print</div>
+                <div class="price">$49.95</div>
+              </div>
+            </article>
+            <article class="menu-item">
+              <img src="https://www.simplikurta.com/cdn/shop/files/20_2_-Photoroom.png?v=1723100620&width=1100" alt="Men Shirt">
+              <div>
+                <div style="font-weight:700">Men's Casual Shirt</div>
+                <div style="font-size:13px;color:var(--muted)">Comfortable cotton shirt for daily wear</div>
+                <div class="price">$35.50</div>
+              </div>
+            </article>
+            <article class="menu-item">
+              <img src="data:image/jpeg;base64,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" alt="Sneakers">
+              <div>
+                <div style="font-weight:700">White Sneakers</div>
+                <div style="font-size:13px;color:var(--muted)">Stylish and comfortable footwear</div>
+                <div class="price">$60.00</div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <aside style="align-self:start;">
+          <div style="border-radius:16px;overflow:hidden;box-shadow:0 8px 36px rgba(12,40,30,0.06);">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfAbe_el3dVl92Cv5W4bxS9whXMVez-WLXgg&s" alt="fashion banner" style="width:100%;height:100%;display:block;object-fit:cover;" />
+          </div>
+          <div style="margin-top:12px;font-size:13px;color:var(--muted)"></div>
+        </aside>
+      </section>
+      <section class="strip">
+        <p><strong>Sign up for Deals</strong> — Get exclusive offers, discounts, and updates on our latest fashion.</p>
+        <div>
+          <a href="Again.html"><button class="btn btn-ghost" style="color:#fff;border:1px solid rgba(255,255,255,0.12);padding:8px 12px;border-radius:10px">Join now</button> </a>
+        </div>
+      </section>
+
+      <section style="margin-top:4px">
+        <h2 style="margin:0 0 12px">Popular Items</h2>
+        <div class="menu-grid">
+          <article class="menu-item">
+            <img src="https://teakwoodleathers.com/cdn/shop/files/T_HB_W_RC_087_BR_530x@2x.jpg?v=1750933278" alt="Handbag">
+            <div>
+              <div style="font-weight:700">Leather Handbag</div>
+              <div style="font-size:13px;color:var(--muted)">Elegant and spacious</div>
+              <div class="price">$120.00</div>
+            </div>
+          </article>
+          <article class="menu-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRukVH1bmQD68Bx0C7LPjO4x5a00Ozh6tqd2g&s" alt="Jeans">
+            <div>
+              <div style="font-weight:700">Denim Jeans</div>
+              <div style="font-size:13px;color:var(--muted)">Classic style for everyday wear</div>
+              <div class="price">$55.00</div>
+            </div>
+          </article>
+          <article class="menu-item">
+            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800&q=60&auto=format&fit=crop" alt="T-shirt">
+            <div>
+              <div style="font-weight:700">Graphic T-Shirt</div>
+              <div style="font-size:13px;color:var(--muted)">Casual and comfortable</div>
+              <div class="price">$25.00</div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="grid-3">
+        <div>
+          <strong>About</strong>
+          <p style="margin-top:8px;color:var(--muted)">Cloth Store landing page — created for demo purposes.</p>
+        </div>
+        <div>
+          <strong>Support</strong>
+          <ul style="list-style:none;padding:0;margin:8px 0 0;color:var(--muted)">
+            <li>FAQ</li>
+            <li>Contact us</li>
+            <li>Order support</li>
+          </ul>
+        </div>
+        <div>
+          <strong>Legal</strong>
+          <ul style="list-style:none;padding:0;margin:8px 0 0;color:var(--muted)">
+            <li>Privacy policy</li>
+            <li>Terms of use</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;border-top:1px solid rgba(11,59,46,0.06);padding-top:18px;color:var(--muted)">
+        © <span id="year"></span> Cloth Store — Demo. All rights reserved.
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
